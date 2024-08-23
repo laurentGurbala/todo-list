@@ -22,6 +22,10 @@ export function createTodoElement(item, parent, todoList) {
         class: "ms-2 form-check-label"
     })
     label.textContent = item.title
+    if (item.completed) {
+        label.classList.add("text-decoration-line-through");
+    }
+
 
     const deleteBtn = createElement("button", {
         class: "ms-auto btn btn-danger btn-sm"
